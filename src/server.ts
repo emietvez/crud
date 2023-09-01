@@ -19,7 +19,7 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
 
   return response.status(500).json({
     status: "error",
-    message: "Internal Server Error",
+    message: "Error Interno del Servidor",
   });
 });
 
@@ -28,5 +28,5 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "..", "views"));
 
 app.listen(3000, () => {
-  console.log("Server is running at port 3000");
+  console.log("El servidor se está ejecutando en el puerto 3000");
 });
